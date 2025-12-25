@@ -9,7 +9,7 @@ import random
 import time
 
 # Configuration de la page
-st.set_page_config(page_title="Générateur d'Équipes Pro", page_icon="🔥")
+st.set_page_config(page_title="Générateur d'Équipes Tyler", page_icon="🔥")
 
 # --- STYLISATION CSS AVANCÉE ---
 st.markdown("""
@@ -18,7 +18,7 @@ st.markdown("""
     @keyframes fadeInUp {
         from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
         }
         to {
             opacity: 1;
@@ -54,14 +54,14 @@ st.markdown("""
     }
 
     .separator {
-        color: #4CAF50; /* Vert pour changer, ou gardez #FF4B4B */
+        color: #1E1E1E; 
         font-size: 1.6rem;
         font-weight: 300;
         margin: 0 15px;
         font-style: italic;
     }
 
-    /* Style du bouton pour le rendre plus imposant */
+    
     .stButton>button {
         width: 100%;
         border-radius: 25px;
@@ -80,34 +80,35 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOGIQUE ---
-st.title("🔥 Tirage au Sort Premium")
-st.write("Préparez-vous pour le mélange des duos !")
+st.title("🔥 Tirage au Sort des équipes Tyler")
+st.write("appuie c'est tout beau !")
 
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
 g2 = ['Mamy', 'Sophie', 'Patrick', 'Kevin', 'Masako']
 
-if st.button('🚀 LANCER LE MÉLANGE ET GÉNÉRER LES ÉQUIPES'):
+if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
     
     # 1. Animation de "réflexion"
-    with st.spinner('🎲 Mélange des listes en cours...'):
+    with st.spinner('🎲 Mélange en cours...'):
         # On simule un temps de calcul pour le suspense
-        time.sleep(1.5)
+        time.sleep(2)
         random.shuffle(g1)
         random.shuffle(g2)
 
     st.success("Tirage terminé !")
+    time.sleep(2)
     st.write("---")
 
     # 2. Affichage séquentiel pour un effet visuel
     for i, (p1, p2) in enumerate(zip(g1, g2), 1):
         # On ajoute un micro-délai pour que les cartes apparaissent l'une après l'autre
-        time.sleep(0.3) 
+        time.sleep(1.5) 
         
         st.markdown(f"""
             <div class="team-card">
-                <span class="team-label">✨ DUO N°{i} ✨</span>
+                <span class="team-label">✨ EQUIPE N°{i} ✨</span>
                 <span class="team-name">{p1}</span>
-                <span class="separator">&</span>
+                <span class="separator"> & </span>
                 <span class="team-name">{p2}</span>
             </div>
         """, unsafe_allow_html=True)
@@ -118,3 +119,4 @@ if st.button('🚀 LANCER LE MÉLANGE ET GÉNÉRER LES ÉQUIPES'):
 else:
     # État initial
     st.info("Appuyez sur le bouton ci-dessus pour démarrer l'animation.")
+
