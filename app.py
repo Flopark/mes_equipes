@@ -10,27 +10,42 @@ import random
 # Configuration de la page
 st.set_page_config(page_title="Générateur d'Équipes", page_icon="🎲")
 
-# Style personnalisé pour faire de "belles cartes"
+# --- STYLISATION CSS ---
 st.markdown("""
-    <style>
+<style>
     .team-card {
-        background-color: #f8f9fa;
-        border-radius: 10px;
-        padding: 15px;
-        border-left: 5px solid #4A90E2;
-        margin-bottom: 10px;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-        font-family: sans-serif;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        text-align: center;
     }
-    .team-name { color: #1f77b4; font-weight: bold; font-size: 1.2rem; }
-    .separator {
-        color: #ff4b4b;
+    .team-label {
+        color: #888888;
+        font-size: 0.75rem;
         font-weight: bold;
-        margin: 0 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+        margin-bottom: 5px;
     }
-    </style>
-    """, unsafe_allow_html=True) # <-- C'est ici que j'ai corrigé "html"
+    .team-name {
+        color: #1E1E1E;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .separator {
+        color: #FF4B4B; /* Couleur rouge Streamlit */
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 0 15px;
+    }
+</style>
+""", unsafe_allow_html=True)
 
+# --- LOGIQUE DE L'APPLICATION ---
 st.title("🎲 Tirage au sort des équipes Tyler")
 
 # Listes de base
@@ -38,22 +53,22 @@ g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
 g2 = ['Mamy', 'Sophie', 'Patrick', 'Kevin', 'Masako']
 
 if st.button('🚀 Lancer le mélange'):
-    # Mélange aléatoire
+    # Mélange aléatoire des deux listes
     random.shuffle(g1)
     random.shuffle(g2)
     
+    st.write("---")
+    
+    # Création des colonnes pour un affichage propre (optionnel)
+    # Ici on affiche une carte par ligne pour bien voir le "&"
     for i, (p1, p2) in enumerate(zip(g1, g2), 1):
         st.markdown(f"""
             <div class="team-card">
-                <span style="color:gray; font-size:0.8rem;">ÉQUIPE {i}</span><br>
-                <span class="team-name">{p1}</span> <span class="separator">&</span> <span class="team-name">{p2}</span>
+                <span class="team-label">ÉQUIPE {i}</span>
+                <span class="team-name">{p1}</span>
+                <span class="separator">&</span>
+                <span class="team-name">{p2}</span>
             </div>
-        """, unsafe_allow_html=True) # <-- Corrigé ici aussi
+        """, unsafe_allow_html=True)
 else:
-
-    st.info("vasy appuie c'est tout beau.")
-
-
-
-
-
+    st.info("Cliquez sur le bouton pour générer les duos !")
