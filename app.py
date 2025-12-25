@@ -106,9 +106,9 @@ if st.button('🚀 TAP TAP TAPPPP !'):
         st.markdown(f"""
             <div class="team-card">
                 <span class="team-label">⛄ EQUIPE N°{i} ⛄</span>
-                <span class="team-name">{p1}</span>
+                <span class="team-name">⛄{p1}</span>
                 <span class="separator"> & </span>
-                <span class="team-name">{p2}</span>
+                <span class="team-name">{p2}⛄</span>
             </div>
         """, unsafe_allow_html=True)
         time.sleep(0.6) 
@@ -116,9 +116,9 @@ if st.button('🚀 TAP TAP TAPPPP !'):
     st.markdown(f"""
             <div class="team-card">
                 <span class="team-label">⛄ EQUIPE N°6 v⛄</span>
-                <span class="team-name"> Thor </span>
+                <span class="team-name">⛄ Thor </span>
                 <span class="separator"> & </span>
-                <span class="team-name"> Luffy </span>
+                <span class="team-name"> Luffy ⛄</span>
             </div>
         """, unsafe_allow_html=True)
     time.sleep(1) 
@@ -128,6 +128,7 @@ if st.button('🚀 TAP TAP TAPPPP !'):
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
