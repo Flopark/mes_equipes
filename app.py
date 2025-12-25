@@ -111,7 +111,7 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
                 <span class="team-name">{p2}</span>
             </div>
         """, unsafe_allow_html=True)
-        time.sleep(0.9) 
+        time.sleep(0.6) 
         
     st.markdown(f"""
             <div class="team-card">
@@ -121,13 +121,14 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
                 <span class="team-name"> Luffy </span>
             </div>
         """, unsafe_allow_html=True)
-    time.sleep(0.9) 
+    time.sleep(1) 
     # 3. Célébration finale
     st.balloons()
 
 else:
     # État initial
     st.info("Appuyez sur le bouton ci-dessus pour démarrer l'animation.")
+
 
 
 
