@@ -26,7 +26,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True) # <-- C'est ici que j'ai corrigé "html"
 
-st.title("🎲 Tirage au sort des équipes")
+st.title("🎲 Tirage au sort des équipes Tyler")
 
 # Listes de base
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
@@ -41,9 +41,10 @@ if st.button('🚀 Lancer le mélange'):
         st.markdown(f"""
             <div class="team-card">
                 <span style="color:gray; font-size:0.8rem;">ÉQUIPE {i}</span><br>
-                <span class="team-name">{p1}</span> & "&" & <span class="team-name">{p2}</span>
+                <span class="team-name">{p1}</span> & <span class="separator">&</span> & <span class="team-name">{p2}</span>
             </div>
         """, unsafe_allow_html=True) # <-- Corrigé ici aussi
 else:
 
     st.info("Clique sur le bouton pour générer les binômes.")
+
