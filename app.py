@@ -66,7 +66,7 @@ st.markdown("""
         width: 100%;
         border-radius: 25px;
         height: 3em;
-        background-color: #FF4B4B;
+        background-color: #0056b3;
         color: white;
         font-weight: bold;
         transition: all 0.3s;
@@ -102,7 +102,6 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
     # 2. Affichage séquentiel pour un effet visuel
     for i, (p1, p2) in enumerate(zip(g1, g2), 1):
         # On ajoute un micro-délai pour que les cartes apparaissent l'une après l'autre
-        time.sleep(1.5) 
         
         st.markdown(f"""
             <div class="team-card">
@@ -112,6 +111,7 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
                 <span class="team-name">{p2}</span>
             </div>
         """, unsafe_allow_html=True)
+        time.sleep(1.5) 
     
     # 3. Célébration finale
     st.balloons()
@@ -119,5 +119,6 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
 else:
     # État initial
     st.info("Appuyez sur le bouton ci-dessus pour démarrer l'animation.")
+
 
 
