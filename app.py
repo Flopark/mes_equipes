@@ -54,7 +54,7 @@ st.markdown("""
     }
 
     .separator {
-        color: #FF4B4B; 
+        color: #0056b3; 
         font-size: 1.6rem;
         font-weight: 300;
         margin: 0 15px;
@@ -128,6 +128,7 @@ if st.button('🚀 TAP TAP TAPPPP !'):
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
