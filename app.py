@@ -26,7 +26,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True) # <-- C'est ici que j'ai corrigé "html"
 
-st.title("🎲 Tirage au sort des équipes Tyler")
+st.title("🎲 Tirage au sort des équipes Tylerb")
 
 # Listes de base
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
@@ -47,5 +47,6 @@ if st.button('🚀 Lancer le mélange'):
 else:
 
     st.info("Clique sur le bouton pour générer les binômes.")
+
 
 
