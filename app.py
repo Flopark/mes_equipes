@@ -6,69 +6,115 @@ Created on Thu Dec 25 00:04:15 2025
 """
 import streamlit as st
 import random
+import time
 
 # Configuration de la page
-st.set_page_config(page_title="Générateur d'Équipes", page_icon="🎲")
+st.set_page_config(page_title="Générateur d'Équipes Pro", page_icon="🔥")
 
-# --- STYLISATION CSS ---
+# --- STYLISATION CSS AVANCÉE ---
 st.markdown("""
 <style>
+    /* Animation d'apparition douce */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
     .team-card {
-        background-color: #ffffff;
+        background: white;
         padding: 20px;
         border-radius: 15px;
         margin-bottom: 15px;
         border: 1px solid #e0e0e0;
-        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         text-align: center;
+        /* Application de l'animation */
+        animation: fadeInUp 0.6s ease-out forwards;
     }
+
     .team-label {
-        color: #888888;
-        font-size: 0.75rem;
+        color: #FF4B4B;
+        font-size: 0.8rem;
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 1px;
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
     }
+
     .team-name {
         color: #1E1E1E;
-        font-size: 1.4rem;
-        font-weight: 700;
-    }
-    .separator {
-        color: #FF4B4B; /* Couleur rouge Streamlit */
         font-size: 1.5rem;
+        font-weight: 800;
+    }
+
+    .separator {
+        color: #4CAF50; /* Vert pour changer, ou gardez #FF4B4B */
+        font-size: 1.6rem;
         font-weight: 300;
         margin: 0 15px;
+        font-style: italic;
+    }
+
+    /* Style du bouton pour le rendre plus imposant */
+    .stButton>button {
+        width: 100%;
+        border-radius: 25px;
+        height: 3em;
+        background-color: #FF4B4B;
+        color: white;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .stButton>button:hover {
+        transform: scale(1.02);
+        box-shadow: 0 5px 15px rgba(255,75,75,0.3);
     }
 </style>
 """, unsafe_allow_html=True)
 
-# --- LOGIQUE DE L'APPLICATION ---
-st.title("🎲 Tirage au sort des équipes Tyler")
+# --- LOGIQUE ---
+st.title("🔥 Tirage au Sort Premium")
+st.write("Préparez-vous pour le mélange des duos !")
 
-# Listes de base
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
 g2 = ['Mamy', 'Sophie', 'Patrick', 'Kevin', 'Masako']
 
-if st.button('🚀 Lancer le mélange'):
-    # Mélange aléatoire des deux listes
-    random.shuffle(g1)
-    random.shuffle(g2)
+if st.button('🚀 LANCER LE MÉLANGE ET GÉNÉRER LES ÉQUIPES'):
     
+    # 1. Animation de "réflexion"
+    with st.spinner('🎲 Mélange des listes en cours...'):
+        # On simule un temps de calcul pour le suspense
+        time.sleep(1.5)
+        random.shuffle(g1)
+        random.shuffle(g2)
+
+    st.success("Tirage terminé !")
     st.write("---")
-    
-    # Création des colonnes pour un affichage propre (optionnel)
-    # Ici on affiche une carte par ligne pour bien voir le "&"
+
+    # 2. Affichage séquentiel pour un effet visuel
     for i, (p1, p2) in enumerate(zip(g1, g2), 1):
+        # On ajoute un micro-délai pour que les cartes apparaissent l'une après l'autre
+        time.sleep(0.3) 
+        
         st.markdown(f"""
             <div class="team-card">
-                <span class="team-label">ÉQUIPE {i}</span>
+                <span class="team-label">✨ DUO N°{i} ✨</span>
                 <span class="team-name">{p1}</span>
                 <span class="separator">&</span>
                 <span class="team-name">{p2}</span>
             </div>
         """, unsafe_allow_html=True)
+    
+    # 3. Célébration finale
+    st.balloons()
+
 else:
-    st.info("Cliquez sur le bouton pour générer les duos !")
+    # État initial
+    st.info("Appuyez sur le bouton ci-dessus pour démarrer l'animation.")
