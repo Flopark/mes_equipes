@@ -54,7 +54,7 @@ st.markdown("""
     }
 
     .separator {
-        color: #1E1E1E; 
+        color: #FF4B4B; 
         font-size: 1.6rem;
         font-weight: 300;
         margin: 0 15px;
@@ -91,12 +91,12 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
     # 1. Animation de "réflexion"
     with st.spinner('🎲 Mélange en cours...'):
         # On simule un temps de calcul pour le suspense
-        time.sleep(2)
+        time.sleep(1.5)
         random.shuffle(g1)
         random.shuffle(g2)
 
     st.success("Tirage terminé !")
-    time.sleep(2)
+    time.sleep(0.6)
     st.write("---")
 
     # 2. Affichage séquentiel pour un effet visuel
@@ -119,4 +119,5 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
 else:
     # État initial
     st.info("Appuyez sur le bouton ci-dessus pour démarrer l'animation.")
+
 
