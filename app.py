@@ -9,7 +9,7 @@ import random
 import time
 
 # Configuration de la page
-st.set_page_config(page_title="Générateur d'Équipes Tyler", page_icon="🔥")
+st.set_page_config(page_title="Générateur d'Équipes Tyler", page_icon="🎄")
 
 # --- STYLISATION CSS AVANCÉE ---
 st.markdown("""
@@ -80,13 +80,13 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOGIQUE ---
-st.title("🔥 Tirage au Sort des équipes Tyler")
-st.write("appuie c'est tout beau !")
+st.title("🎄 Tirage au Sort des équipes Tyler")
+st.write("Appuie c'est tout beau !")
 
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
 g2 = ['Mamy', 'Sophie', 'Patrick', 'Kevin', 'Masako']
 
-if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
+if st.button('🚀 TAP TAP TAPPPP !'):
     
     # 1. Animation de "réflexion"
     with st.spinner('🎲 Mélange en cours...'):
@@ -123,11 +123,13 @@ if st.button('🚀 LANCER LE MÉLANGE ET CREER LES ÉQUIPES'):
         """, unsafe_allow_html=True)
     time.sleep(1) 
     # 3. Célébration finale
-    st.balloons()
+    st.toast('Les équipes sont prêtes !', icon='💙')
+    st.snow()
 
 else:
     # État initial
-    st.info("Appuyez sur le bouton ci-dessus pour démarrer l'animation.")
+    st.info("Joyeux Noël !")
+
 
 
 
