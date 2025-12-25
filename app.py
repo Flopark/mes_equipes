@@ -23,10 +23,15 @@ st.markdown("""
         font-family: sans-serif;
     }
     .team-name { color: #1f77b4; font-weight: bold; font-size: 1.2rem; }
+    .separator {
+        color: #ff4b4b;
+        font-weight: bold;
+        margin: 0 10px;
+    }
     </style>
     """, unsafe_allow_html=True) # <-- C'est ici que j'ai corrigé "html"
 
-st.title("🎲 Tirage au sort des équipes Tyler bb")
+st.title("🎲 Tirage au sort des équipes Tyler")
 
 # Listes de base
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
@@ -46,7 +51,8 @@ if st.button('🚀 Lancer le mélange'):
         """, unsafe_allow_html=True) # <-- Corrigé ici aussi
 else:
 
-    st.info("Clique sur le bouton pour générer les binômes.")
+    st.info("vasy appuie c'est tout beau.")
+
 
 
 
