@@ -39,7 +39,7 @@ st.markdown("""
     }
 
     .team-label {
-        color: #FF4B4B;
+        color: #0056b3;
         font-size: 0.8rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -80,7 +80,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOGIQUE ---
-st.title("🎄 Tirage au Sort des équipes Tyler")
+st.title("🎄 Tirage au sort des équipes Tyler")
 st.write("Appuie c'est tout beau !")
 
 g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
@@ -105,7 +105,7 @@ if st.button('🚀 TAP TAP TAPPPP !'):
         
         st.markdown(f"""
             <div class="team-card">
-                <span class="team-label">✨ EQUIPE N°{i} ✨</span>
+                <span class="team-label">⛄ EQUIPE N°{i} ⛄</span>
                 <span class="team-name">{p1}</span>
                 <span class="separator"> & </span>
                 <span class="team-name">{p2}</span>
@@ -115,7 +115,7 @@ if st.button('🚀 TAP TAP TAPPPP !'):
         
     st.markdown(f"""
             <div class="team-card">
-                <span class="team-label">✨ EQUIPE N°6 ✨</span>
+                <span class="team-label">⛄ EQUIPE N°6 v⛄</span>
                 <span class="team-name"> Thor </span>
                 <span class="separator"> & </span>
                 <span class="team-name"> Luffy </span>
@@ -123,12 +123,12 @@ if st.button('🚀 TAP TAP TAPPPP !'):
         """, unsafe_allow_html=True)
     time.sleep(1) 
     # 3. Célébration finale
-    st.toast('Les équipes sont prêtes !', icon='💙')
     st.snow()
 
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
