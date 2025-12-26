@@ -83,8 +83,8 @@ st.markdown("""
 st.title("🎄 Tirage au sort des équipes Tyler")
 st.write("Appuie c'est tout beau !")
 
-g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'William']
-g2 = ['Mamy', 'Sophie', 'Patrick', 'Kevin', 'Masako']
+g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'Kevin']
+g2 = ['Mamy', 'Sophie', 'Patrick', 'William', 'Masako']
 
 if st.button('🚀 TAP TAP TAPPPP !'):
     
@@ -128,6 +128,7 @@ if st.button('🚀 TAP TAP TAPPPP !'):
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
