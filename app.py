@@ -9,7 +9,7 @@ import random
 import time
 
 # Configuration de la page
-st.set_page_config(page_title="Générateur d'Équipes Tyler", page_icon="🎄")
+st.set_page_config(page_title="Générateur d'Équipes Tyler", page_icon="🎲")
 
 # --- STYLISATION CSS AVANCÉE ---
 st.markdown("""
@@ -80,7 +80,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOGIQUE ---
-st.title(" Tirage au sort des Teams de Gadz")
+st.title(" 🎲 Tirage au sort des Teams de Gadz")
 st.write("Appuie c'est tout beau !")
 
 g1 = ['leo', 'oliv', 'Flo', 'Nathan', 'liam']
@@ -118,6 +118,7 @@ if st.button('🚀 TAP TAP TAPPPP !'):
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
