@@ -80,11 +80,11 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- LOGIQUE ---
-st.title("🎄 Tirage au sort des équipes Tyler")
+st.title(" Tirage au sort des Teams de Gadz")
 st.write("Appuie c'est tout beau !")
 
-g1 = ['Aglaé', 'Camille', 'Florian', 'Nathan', 'Kevin']
-g2 = ['Mamy', 'Sophie', 'Patrick', 'William', 'Masako']
+g1 = ['leo', 'oliv', 'Flo', 'Nathan', 'liam']
+g2 = ['greg', 'aurel', 'Lucas', 'Tecknockss', 'Booster']
 
 if st.button('🚀 TAP TAP TAPPPP !'):
     
@@ -105,29 +105,21 @@ if st.button('🚀 TAP TAP TAPPPP !'):
         
         st.markdown(f"""
             <div class="team-card">
-                <span class="team-label">❄️ EQUIPE N°{i} ❄️</span>
-                <span class="team-name">⛄{p1}</span>
+                <span class="team-label">🗿 EQUIPE N°{i} 🗿</span>
+                <span class="team-name">⬜​{p1}</span>
                 <span class="separator"> & </span>
-                <span class="team-name">{p2}⛄</span>
+                <span class="team-name">{p2}🟩</span>
             </div>
         """, unsafe_allow_html=True)
-        time.sleep(0.6) 
-        
-    st.markdown(f"""
-            <div class="team-card">
-                <span class="team-label">❄️ EQUIPE N°6 ❄️</span>
-                <span class="team-name">⛄ Thor </span>
-                <span class="separator"> & </span>
-                <span class="team-name"> Luffy ⛄</span>
-            </div>
-        """, unsafe_allow_html=True)
+    
     time.sleep(1) 
     # 3. Célébration finale
-    st.snow()
+    st.balloon()
 
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
