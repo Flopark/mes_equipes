@@ -111,14 +111,14 @@ if st.button('🚀 TAP TAP TAPPPP !'):
                 <span class="team-name">{p2}🟩</span>
             </div>
         """, unsafe_allow_html=True)
-    
-    time.sleep(1) 
+        time.sleep(0.6) 
     # 3. Célébration finale
-    st.balloon()
+    st.baloon()
 
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
