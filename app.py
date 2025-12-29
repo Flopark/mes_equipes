@@ -113,11 +113,12 @@ if st.button('🚀 TAP TAP TAPPPP !'):
         """, unsafe_allow_html=True)
         time.sleep(0.6) 
     # 3. Célébration finale
-    st.baloon()
+    st.ballon()
 
 else:
     # État initial
     st.info("Joyeux Noël !")
+
 
 
 
